@@ -6,6 +6,7 @@ new_cart = {}
   cart.each do |item|
     item_name = item.keys[0]
     new_cart[item_name] = item.values[0]
+    binding.pry
     if new_cart[item_name][:count]
       new_cart[item_name][:count] += 1
     else
