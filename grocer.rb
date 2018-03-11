@@ -3,7 +3,7 @@ def consolidate_cart(cart)
   counter
 
 cart.each do |hash|
-  hash.each do 
+  hash.each do
   binding.pry
 end
 end
