@@ -2,19 +2,19 @@ require 'pry'
 
 def consolidate_cart(cart)
 new_cart = {}
-  
+
   cart.each do |item|
     item_name = item.keys[0]
     binding.pry
     new_cart[item_name] = item.values[0]
-    if new_cart[item_name][:count] 
+    if new_cart[item_name][:count]
       new_cart[item_name][:count] += 1
     else
       consolidated_cart[item_name][:count] = 1
         end
       end
     consolidated_cart
-  end		  
+  end
 end
 
 def apply_coupons(cart, coupons)
