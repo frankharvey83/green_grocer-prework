@@ -6,11 +6,12 @@ new_cart = {}
   cart.each do |item|
     item_name = item.keys[0]
     new_cart[item_name] = item.values
+end
     new_cart[item_name].merge(:count => 0)
     binding.pry
     if new_cart[item_name]
       new_cart[item_name][:count] += 1
-        end
+
       end
     consolidated_cart
   end
