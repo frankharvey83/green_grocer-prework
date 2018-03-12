@@ -7,12 +7,9 @@ new_cart = {}
     item_name = item.keys[0]
     new_cart[item_name] = item.values
     new_cart[item_name].merge(:count => 0)
-    pry
+    binding.pry
 end
 
-  new_cart.each do |product|
-    new_cart[item_name].merge(:count => 0)
-    binding.pry
     if new_cart[item_name]
       new_cart[item_name][:count] += 1
     end
