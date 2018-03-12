@@ -5,7 +5,6 @@ def consolidate_cart(cart)
 
   cart.each do |hash|
     hash.each do |product, info|
-      new_hash[product].merge(:count => 1)
       if new_hash[product]
         new_hash[product][:count] += 1
       else
