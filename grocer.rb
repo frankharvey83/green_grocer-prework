@@ -22,16 +22,12 @@ def apply_coupons(cart, coupons)
       return cart
     else
       coupons.each do |index|
-        binding.pry
-
         name = index[:item]
         item = cart[name]
 
         if(item != nil)
-          #update curent item
           if(item[:count] >= index[:num])
             item[:count] = item[:count] - index[:num]
-            #add coupon item
             couponkey = "#{name} W/COUPON"
             if(cart[couponkey] == nil)
               couponitem = {:price => index[:cost], :clearance => item[:clearance], :count => 1}
