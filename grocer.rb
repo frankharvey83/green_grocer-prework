@@ -6,6 +6,8 @@ new_cart = {}
   cart.each do |item|
     item_name = item.keys[0]
     new_cart[item_name] = item.values
+    new_cart[item_name].merge(:count => 0)
+    pry
 end
 
   new_cart.each do |product|
