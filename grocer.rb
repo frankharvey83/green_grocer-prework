@@ -9,6 +9,7 @@ new_cart = {}
 end
 
   new_cart.each do |product|
+    binding.pry
     new_cart[item_name].merge(:count => 0)
     binding.pry
     if new_cart[item_name]
