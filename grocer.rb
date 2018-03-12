@@ -14,7 +14,7 @@ end
     binding.pry
     if new_cart[item_name]
       new_cart[item_name][:count] += 1
-
+    end
       end
     consolidated_cart
   end
