@@ -18,15 +18,12 @@ end
 
 
 def apply_coupons(cart, coupons)
-  def apply_coupons(cart, coupons)
-    # code here
     if coupons.length == 0
       return cart
     else
-
       coupons.each do |index|
-        #index = coupon
-        #item = cart item
+        binding.pry
+        
         name = index[:item]
         item = cart[name]
 
@@ -42,11 +39,11 @@ def apply_coupons(cart, coupons)
             else
               couponitem = cart[couponkey];
               couponitem[:count] +=1;
+              end
             end
           end
         end
       end
-     end
     cart
   end
 end
