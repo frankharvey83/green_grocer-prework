@@ -58,10 +58,8 @@ def checkout(cart, coupons)
   cart = apply_clearance(cart:cart)
   total = 0
 
-  cart.each do |item, properties|
-  total += properties[:price] * properties[:count]
+  cart.each do |food, info|
+  result += (info[:price] * info[:count]).to_f
 end
-
-   total > 100 ? total -= total * 0.1 : nil
-   total
+  result > 100 ? result * 0.9 : result
 end
