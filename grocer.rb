@@ -23,7 +23,7 @@ def apply_coupons(cart, coupons)
     else
       coupons.each do |index|
         binding.pry
-        
+
         name = index[:item]
         item = cart[name]
 
@@ -46,7 +46,7 @@ def apply_coupons(cart, coupons)
       end
     cart
   end
-end
+
 
 def apply_clearance(cart)
   # code here
