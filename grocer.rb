@@ -8,6 +8,9 @@ def consolidate_cart(cart)
       new_hash[product].merge(:count => 1)
       if new_hash[product]
         new_hash[product][:count] += 1
+      else
+        new_hash[product] = info
+        new_hash[product][:count] = 1
         end
       end
     end
