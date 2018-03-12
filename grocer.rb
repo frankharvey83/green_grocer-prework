@@ -12,7 +12,6 @@ end
 
     if new_cart[item_name]
       new_cart[item_name][:count] += 1
-    end
       end
     consolidated_cart
   end
