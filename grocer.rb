@@ -21,20 +21,20 @@ def apply_coupons(cart, coupons)
     if coupons.length == 0
       return cart
     else
-      coupons.each do |index|
-        name = index[:item]
+      coupons.each do |coupon|
+        name = coupon[:item]
         item = cart[name]
-
+        
         if(item != nil)
-          if(item[:count] >= index[:num])
-            item[:count] = item[:count] - index[:num]
-            couponkey = "#{name} W/COUPON"
-            if(cart[couponkey] == nil)
-              couponitem = {:price => index[:cost], :clearance => item[:clearance], :count => 1}
-              cart[couponkey] = couponitem
+          if(item[:count] >= coupon[:num])
+            item[:count] -= coupon[:num]
+            coupon_key = "#{name} W/COUPON"
+            if(cart[coupon_key] == nil)
+              coupon_item = {:price => coupon[:cost], :clearance => item[:clearance], :count => 1}
+              cart[coupon_key] = coupon_item
             else
-              couponitem = cart[couponkey];
-              couponitem[:count] +=1;
+              coupon_item = cart[coupon_key]
+              coupon_item[:count] +=1
               end
             end
           end
